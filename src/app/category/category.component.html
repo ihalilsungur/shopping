@@ -8,9 +8,9 @@
                     Tüm Ürünler
                 </li>
             </ul>
-            <ul *ngFor="let category of categories" class="list-group">
-                <li class="list-group-item">{{category.name}}</li>
-              </ul>
+            <div *ngFor="let category of categories" class="list-group">
+                <a class="list-group-item" style="text-decoration: none;font-weight: bold;" routerLink="products/category/{{category.id}}">{{category.name}}</a>
+              </div>
         </div>
         <div class="col-md-1"></div>
     </div>
