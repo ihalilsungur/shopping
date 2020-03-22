@@ -1,5 +1,5 @@
-<!-- <h3 class="" style="text-align: center;" *ngIf="products;else noProduct">{{title}}</h3>  -->
-<app-category></app-category>
+<!-- <h3 class="" style="text-align: center;" *ngIf="clothes;else noProduct">{{title}}</h3>  -->
+<app-clothing-category></app-clothing-category>
 <ng-template #noProduct>
   <div class="row">
     <div class="col-md-3"></div>
@@ -15,7 +15,7 @@
 <div class="container-fluid mt-2 ">
   <div class="row">
     <div class="col-md-4">
-      <div class="form-group" *ngIf="products">
+      <div class="form-group" *ngIf="clothes">
         <input class="form-control fas fa-search" class="callback-input" id="productName" [(ngModel)]="filterText"
           placeholder="Armamak istediğiniz ürünün ismini giriniz">
         <small id="" class="form-text text-muted" *ngIf="filterText">
@@ -27,13 +27,13 @@
 
 <div class="container-fluid">
   <div class="row mt-2">
-    <div *ngFor="let product of products | productFilter:filterText" class="card mb-2"
+    <div *ngFor="let clothing of clothes | productFilter:filterText" class="card mb-2"
       style="width: 270px;margin-right: 5px;">
-      <img [src]="product.imageUrl" class="card-img-top" alt="..." width="200px" height="200px">
+      <img [src]="clothing.imageUrl" class="card-img-top" alt="..." width="200px" height="200px">
       <div class="card-body">
-        <h5 class="card-title">{{product.name }} {{ product.price | currency:"  ":true:"1.2-2"}} TL</h5>
-        <p class="card-text">{{product.description}}</p>
-        <a (click)="addToCart(product)" class="btn btn-primary" style="color: white;">Sepete Ekle</a>
+        <h5 class="card-title">{{clothing.name }} {{ clothing.price | currency:"  ":true:"1.2-2"}} TL</h5>
+        <p class="card-text">{{clothing.description}}</p>
+        <a (click)="addToClothingCart(clothing)" class="btn btn-primary" style="color: white;">Sepete Ekle</a> 
       </div>
     </div>
 

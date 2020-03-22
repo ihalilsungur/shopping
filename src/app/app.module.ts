@@ -10,6 +10,14 @@ import { NavComponent } from './nav/nav.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
+import { HomepageComponent } from './homepage/homepage.component';
+import { ClothingComponent } from './clothing/clothing.component';
+import { ShoesComponent } from './shoes/shoes.component';
+import { SportComponent } from './sport/sport.component';
+import { BooksComponent } from './books/books.component';
+import { GemClockComponent } from './gem-clock/gem-clock.component';
+import { ClothingCategoryComponent } from './clothing-category/clothing-category.component';
+
 
 
 @NgModule({
@@ -18,7 +26,14 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
     NavComponent,
     CategoryComponent,
     ProductComponent,
-    ProductFilterPipe
+    ProductFilterPipe,
+    HomepageComponent,
+    ClothingComponent,
+    ShoesComponent,
+    SportComponent,
+    BooksComponent,
+    GemClockComponent,
+    ClothingCategoryComponent
   ],
   imports: [
     BrowserModule,
