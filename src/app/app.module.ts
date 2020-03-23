@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //inputlari kullanmak icin {FormsModule} ekliyoruz
-import {FormsModule} from "@angular/forms";
+import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,7 @@ import { SportComponent } from './sport/sport.component';
 import { BooksComponent } from './books/books.component';
 import { GemClockComponent } from './gem-clock/gem-clock.component';
 import { ClothingCategoryComponent } from './clothing-category/clothing-category.component';
+import { ProductAddFormsComponent } from './product/product-add-forms/product-add-forms.component';
 
 
 
@@ -33,13 +34,15 @@ import { ClothingCategoryComponent } from './clothing-category/clothing-category
     SportComponent,
     BooksComponent,
     GemClockComponent,
-    ClothingCategoryComponent
+    ClothingCategoryComponent,
+    ProductAddFormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
