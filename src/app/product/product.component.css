@@ -8,5 +8,9 @@
    border: solid 2px rgb(114, 94, 94);
    border-radius: 10px;
    outline: none;
-   
+
+}
+.product-add{
+   padding-left: 30px;
+   padding-right: 30px;
 }
