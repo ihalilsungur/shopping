@@ -18,6 +18,7 @@ import { BooksComponent } from './books/books.component';
 import { GemClockComponent } from './gem-clock/gem-clock.component';
 import { ClothingCategoryComponent } from './clothing-category/clothing-category.component';
 import { ProductAddFormsComponent } from './product/product-add-forms/product-add-forms.component';
+import { ClothingAddFormsComponent } from './clothing/clothing-add-forms/clothing-add-forms.component';
 
 
 
@@ -35,7 +36,8 @@ import { ProductAddFormsComponent } from './product/product-add-forms/product-ad
     BooksComponent,
     GemClockComponent,
     ClothingCategoryComponent,
-    ProductAddFormsComponent
+    ProductAddFormsComponent,
+    ClothingAddFormsComponent
   ],
   imports: [
     BrowserModule,
