@@ -1,0 +1,56 @@
+.callback-input{
+    width: 500px;
+    margin-left: -12px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+    border: solid 2px rgb(114, 94, 94);
+    border-radius: 10px;
+    outline: none;
+ 
+ }
+ .product-add{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 50px;
+ }
+ 
+
+ @media only screen and (min-width:1200px){ /* XL */
+	.noProduct{
+    width: 950px;
+    min-width: 950px;
+    max-width: 950px;
+	}
+}
+@media only screen and (min-width:992px) and (max-width:1199px){ /* L */
+	.noProduct{
+        width: 750px;
+        min-width: 750px;
+        max-width: 750px;
+        }
+}
+@media only screen and (min-width:768px) and (max-width:991px){ /* M */
+	.noProduct{
+        width: 500px;
+        min-width: 500px;
+        max-width: 500px;
+        }
+}
+@media only screen and (min-width:576px) and (max-width:767px){ /* S */
+	.noProduct{
+        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
+        }
+}
+@media only screen and (max-width:574px){ /* XS */
+	.noProduct{
+        width: 300px;
+        min-width: 300px;
+        max-width: 300px;
+        }
+}

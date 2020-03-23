@@ -1,1 +1,46 @@
-<p>shoes works!</p>
+<app-shoes-category></app-shoes-category>
+  <div class="container mt-3 noProduct" *ngIf="!shoes">
+  <div class="row" >
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="alert alert-primary" role="alert" style="text-align: center;font-weight: bold;font-size: 20px;">
+        Bu kategoride ürün yoktur !.
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+
+
+<div class="container-fluid mt-2 "*ngIf="shoes">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group" >
+        <input class="form-control fas fa-search callback-input" id="productName" [(ngModel)]="filterText"
+          placeholder="Armamak istediğiniz ürünün ismini giriniz">
+        <small id="" class="form-text text-muted" *ngIf="filterText">
+          Şu an <strong> {{ filterText }}</strong> aradınız </small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary product-add" routerLink="/product-add">
+        Ürün Ekle</button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div *ngFor="let shoe of shoes | productFilter:filterText" class="card mb-2"
+      style="width: 270px;margin-right: 5px;">
+      <img [src]="shoe.imageUrl" class="card-img-top" alt="..." width="200px" height="200px">
+      <div class="card-body">
+        <h5 class="card-title">{{shoe.name }} {{ shoe.price | currency:"  ":true:"1.2-2"}} TL</h5>
+        <p class="card-text">{{shoe.description}}</p>
+        <a (click)="addToCart(shoe)" class="btn btn-primary" style="color: white;">Sepete Ekle</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>

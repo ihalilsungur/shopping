@@ -19,6 +19,7 @@ import { GemClockComponent } from './gem-clock/gem-clock.component';
 import { ClothingCategoryComponent } from './clothing-category/clothing-category.component';
 import { ProductAddFormsComponent } from './product/product-add-forms/product-add-forms.component';
 import { ClothingAddFormsComponent } from './clothing/clothing-add-forms/clothing-add-forms.component';
+import { ShoesCategoryComponent } from './shoes/shoes-category/shoes-category.component';
 
 
 
@@ -37,7 +38,8 @@ import { ClothingAddFormsComponent } from './clothing/clothing-add-forms/clothin
     GemClockComponent,
     ClothingCategoryComponent,
     ProductAddFormsComponent,
-    ClothingAddFormsComponent
+    ClothingAddFormsComponent,
+    ShoesCategoryComponent
   ],
   imports: [
     BrowserModule,
