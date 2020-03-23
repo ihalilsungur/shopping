@@ -1,5 +1,5 @@
-<h3 class="newProductTitle">Yeni Giyim Ürünü Ekleme</h3>
-<form [formGroup]="productAddForm" (ngSubmit)="addProduct()" class="form">
+<h3 class="newProductTitle">Yeni Ayakkabı Ürünü Ekleme</h3>
+<form [formGroup]="productAddForm" (ngSubmit)="addShoe()" class="form">
     <div class="form-group">
         <input type="text" formControlName="name" class="form-control" id="name" name="name"
             placeholder="Ürün ismini giriniz">
@@ -34,7 +34,7 @@
 
     <div class="from-group">
         <select class="form-control" formControlName="categoryId" id="categoryId" name="categoryId">
-            <option *ngFor="let category of clothingCategories" [value]="category.id"> {{category.name}}</option>
+            <option *ngFor="let shoe of shoesCategories" [value]="shoe.id"> {{shoe.name}}</option>
         </select>
         <div class="alert alert-danger mt-2" style="font-weight: bold;"
             *ngIf="productAddForm.get('categoryId').hasError('required') && productAddForm.get('categoryId').touched">
@@ -44,3 +44,4 @@
 
 
 </form>
+

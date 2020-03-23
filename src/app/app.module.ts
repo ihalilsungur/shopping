@@ -20,6 +20,7 @@ import { ClothingCategoryComponent } from './clothing-category/clothing-category
 import { ProductAddFormsComponent } from './product/product-add-forms/product-add-forms.component';
 import { ClothingAddFormsComponent } from './clothing/clothing-add-forms/clothing-add-forms.component';
 import { ShoesCategoryComponent } from './shoes/shoes-category/shoes-category.component';
+import { ShoeAddFormsComponent } from './shoes/shoe-add-forms/shoe-add-forms.component';
 
 
 
@@ -39,7 +40,8 @@ import { ShoesCategoryComponent } from './shoes/shoes-category/shoes-category.co
     ClothingCategoryComponent,
     ProductAddFormsComponent,
     ClothingAddFormsComponent,
-    ShoesCategoryComponent
+    ShoesCategoryComponent,
+    ShoeAddFormsComponent
   ],
   imports: [
     BrowserModule,
