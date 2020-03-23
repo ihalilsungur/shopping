@@ -1,1 +1,46 @@
-<p>product-add-forms works!</p>
+<h3 class="newProductTitle">Yeni Ürün Ekleme</h3>
+<form [formGroup]="productAddForm" (ngSubmit)="addProduct()" class="form">
+    <div class="form-group">
+        <input type="text" formControlName="name" class="form-control" id="name" name="name"
+            placeholder="Ürün ismini giriniz">
+        <div class="alert alert-danger mt-2" style="font-weight: bold;"
+            *ngIf="productAddForm.get('name').hasError('required') && productAddForm.get('name').dirty">
+            Ürün Adı Zorunludur!</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" formControlName="description" class="form-control" id="description" name="description"
+            placeholder="Açıklama  giriniz">
+        <div class="alert alert-danger mt-2" style="font-weight: bold;"
+            *ngIf="productAddForm.get('description').hasError('required') && productAddForm.get('description').dirty">
+            Açıklama Alanı Zorunludur!</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" formControlName="imageUrl" class="form-control" id="imageUrl" name="imageUrl"
+            placeholder="Resmin yolunu  giriniz">
+        <div class="alert alert-danger mt-2" style="font-weight: bold;"
+            *ngIf="productAddForm.get('imageUrl').hasError('required') && productAddForm.get('imageUrl').dirty">
+            Resimin Yolu Zorunludur!</div>
+    </div>
+
+    <div class="form-group">
+        <input type="number" formControlName="price" class="form-control" id="price" name="price"
+            placeholder="Fiyat alanı  giriniz">
+        <div class="alert alert-danger mt-2" style="font-weight: bold;"
+            *ngIf="productAddForm.get('price').hasError('required') && productAddForm.get('price').dirty">
+            Fiyat Alanı Zorunludur!</div>
+    </div>
+
+    <div class="from-group">
+        <select class="form-control" formControlName="categoryId" id="categoryId" name="categoryId">
+            <option *ngFor="let category of categories" [value]="category.id"> {{category.name}}</option>
+        </select>
+        <div class="alert alert-danger mt-2" style="font-weight: bold;"
+            *ngIf="productAddForm.get('categoryId').hasError('required') && productAddForm.get('categoryId').touched">
+            Kategori Alanı Zorunludur!</div>
+    </div>
+    <button type="submit"  class="btn btn-primary mt-3" [disabled]="productAddForm.invalid">Ürün Ekle</button>
+
+
+</form>
