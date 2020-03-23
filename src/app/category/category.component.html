@@ -1,6 +1,6 @@
 <div class="nav-scroller py-1 mb-2 home">
     <nav class="nav d-flex justify-content-between">
-        <a class="p-2 text-muted" routerLink="products/"
+        <a class="p-2 text-muted" routerLink="/products"
             style="font-weight: bold;">Tüm Ürünler</a>
         <a class="p-2 text-muted" *ngFor="let category of categories" routerLink="/products/category/{{category.id}}"
             style="font-weight: bold;">{{category.name}}</a>
