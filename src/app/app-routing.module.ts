@@ -9,6 +9,7 @@ import { SportComponent } from './sport/sport.component';
 import { BooksComponent } from './books/books.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ClothingCategoryComponent } from './clothing-category/clothing-category.component';
+import { ProductAddFormsComponent } from './product/product-add-forms/product-add-forms.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:"books",component:BooksComponent},
   {path:"clothes/clothing-categories/:categoryId",component:ClothingComponent},
   {path:"clothing-categories",component:ClothingCategoryComponent},
+  {path:"product-add",component:ProductAddFormsComponent}
 
 
 ];

@@ -14,13 +14,16 @@
 
 <div class="container-fluid mt-2 ">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
       <div class="form-group" *ngIf="products">
         <input class="form-control fas fa-search" class="callback-input" id="productName" [(ngModel)]="filterText"
           placeholder="Armamak istediğiniz ürünün ismini giriniz">
         <small id="" class="form-text text-muted" *ngIf="filterText">
           Şu an <strong> {{ filterText }}</strong> aradınız </small>
       </div>
+     <div class="col-md-4">
+      <div class="btn btn-primary">Ürün Ekleme</div>
+     </div>
     </div>
   </div>
 </div>

@@ -17,6 +17,7 @@ import { SportComponent } from './sport/sport.component';
 import { BooksComponent } from './books/books.component';
 import { GemClockComponent } from './gem-clock/gem-clock.component';
 import { ClothingCategoryComponent } from './clothing-category/clothing-category.component';
+import { ProductAddFormsComponent } from './product/product-add-forms/product-add-forms.component';
 
 
 
@@ -33,7 +34,8 @@ import { ClothingCategoryComponent } from './clothing-category/clothing-category
     SportComponent,
     BooksComponent,
     GemClockComponent,
-    ClothingCategoryComponent
+    ClothingCategoryComponent,
+    ProductAddFormsComponent
   ],
   imports: [
     BrowserModule,
