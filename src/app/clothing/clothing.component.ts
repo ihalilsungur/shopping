@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Clothing } from './Clothing';
-import { ClothingService} from "./clothing.service";
+import { ClothingService} from "../services/clothing.service";
 import { ActivatedRoute } from "@angular/router";
 import { AlertifyService } from "../services/alertify.service";
 
