@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { ClothingCategory } from './clothing-category';
+import { ClothingCategory } from '../clothing-category/clothing-category';
 import { catchError, tap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
