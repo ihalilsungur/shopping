@@ -10,6 +10,7 @@ import { BooksComponent } from './books/books.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ClothingCategoryComponent } from './clothing-category/clothing-category.component';
 import { ProductAddFormsComponent } from './product/product-add-forms/product-add-forms.component';
+import { ClothingAddFormsComponent } from './clothing/clothing-add-forms/clothing-add-forms.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:"books",component:BooksComponent},
   {path:"clothes/clothing-categories/:categoryId",component:ClothingComponent},
   {path:"clothing-categories",component:ClothingCategoryComponent},
-  {path:"product-add",component:ProductAddFormsComponent}
+  {path:"product-add",component:ProductAddFormsComponent},
+  {path:"clothing-add",component:ClothingAddFormsComponent}
 
 
 ];
