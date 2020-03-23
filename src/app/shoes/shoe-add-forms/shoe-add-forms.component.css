@@ -1,33 +1,42 @@
+.newProductTitle{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+   
+}
+
+
 @media only screen and (min-width:1200px){ /* XL */
-	.home{
+	.form{
     width: 950px;
     min-width: 950px;
     max-width: 950px;
 	}
 }
 @media only screen and (min-width:992px) and (max-width:1199px){ /* L */
-	.home{
+	.form{
         width: 750px;
         min-width: 750px;
         max-width: 750px;
         }
 }
 @media only screen and (min-width:768px) and (max-width:991px){ /* M */
-	.home{
+	.form{
         width: 500px;
         min-width: 500px;
         max-width: 500px;
         }
 }
 @media only screen and (min-width:576px) and (max-width:767px){ /* S */
-	.home{
+	.form{
         width: 400px;
         min-width: 400px;
         max-width: 400px;
         }
 }
 @media only screen and (max-width:574px){ /* XS */
-	.home{
+	.form{
         width: 300px;
         min-width: 300px;
         max-width: 300px;

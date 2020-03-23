@@ -11,6 +11,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ClothingCategoryComponent } from './clothing-category/clothing-category.component';
 import { ProductAddFormsComponent } from './product/product-add-forms/product-add-forms.component';
 import { ClothingAddFormsComponent } from './clothing/clothing-add-forms/clothing-add-forms.component';
+import { ShoesCategoryComponent } from './shoes/shoes-category/shoes-category.component';
+import { ShoeAddFormsComponent } from './shoes/shoe-add-forms/shoe-add-forms.component';
 
 
 const routes: Routes = [
@@ -27,7 +29,10 @@ const routes: Routes = [
   {path:"clothes/clothing-categories/:categoryId",component:ClothingComponent},
   {path:"clothing-categories",component:ClothingCategoryComponent},
   {path:"product-add",component:ProductAddFormsComponent},
-  {path:"clothing-add",component:ClothingAddFormsComponent}
+  {path:"clothing-add",component:ClothingAddFormsComponent},
+  {path:"shoes-category",component:ShoesCategoryComponent},
+  {path:"shoes/shoes-category/:categoryId",component:ShoesComponent},
+  {path:"shoe-add",component:ShoeAddFormsComponent}
 
 
 ];
