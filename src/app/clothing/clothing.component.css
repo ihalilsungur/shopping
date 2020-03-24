@@ -14,5 +14,9 @@
  .product-add{
     padding-left: 30px;
     padding-right: 30px;
+    margin-left: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: bold;
  }
  
