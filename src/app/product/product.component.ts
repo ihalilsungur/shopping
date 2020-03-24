@@ -3,6 +3,7 @@ import { Product } from "./product";
 import { AlertifyService } from "../services/alertify.service";
 import { ProductService } from "../services/product.service";
 import { ActivatedRoute } from "@angular/router";
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: "app-product",
@@ -14,7 +15,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private alertifyService: AlertifyService,
     private productService: ProductService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private accountService:AccountService
   ) {}
   title = "Ürün Listesi";
   filterText = "";
@@ -29,5 +31,13 @@ export class ProductComponent implements OnInit {
   }
   addToCart(product) {
     this.alertifyService.success(product.name + " Added.");
+  }
+
+  accessControl(){
+   let isLoggin = this.accountService.isLoggedIn();
+   if(isLoggin){
+     return true;
+   }
+   return false;
   }
 }

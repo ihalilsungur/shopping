@@ -3,6 +3,7 @@ import { Clothing } from './Clothing';
 import { ClothingService} from "../services/clothing.service";
 import { ActivatedRoute } from "@angular/router";
 import { AlertifyService } from "../services/alertify.service";
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: 'app-clothing',
@@ -15,7 +16,9 @@ export class ClothingComponent implements OnInit {
   constructor(
     private clothingService :ClothingService,
     private activatedRoute: ActivatedRoute,
-    private alertifyService:AlertifyService) { }
+    private alertifyService:AlertifyService,
+    private accountService:AccountService
+    ) { }
   clothes:Clothing[];
   filterText=""
   ngOnInit(): void {
@@ -31,6 +34,14 @@ export class ClothingComponent implements OnInit {
   addToClothingCart(clothing){
     this.alertifyService.success(clothing.name + " Added.");
   }
+
+  accessControl(){
+    let isLoggin = this.accountService.isLoggedIn();
+    if(isLoggin){
+      return true;
+    }
+    return false;
+   }
   
 }
 

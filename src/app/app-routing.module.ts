@@ -13,6 +13,8 @@ import { ProductAddFormsComponent } from './product/product-add-forms/product-ad
 import { ClothingAddFormsComponent } from './clothing/clothing-add-forms/clothing-add-forms.component';
 import { ShoesCategoryComponent } from './shoes/shoes-category/shoes-category.component';
 import { ShoeAddFormsComponent } from './shoes/shoe-add-forms/shoe-add-forms.component';
+import { LoginComponent } from './login/login.component';
+import { LoginGuard } from './login/login.guard';
 
 
 const routes: Routes = [
@@ -28,11 +30,12 @@ const routes: Routes = [
   {path:"books",component:BooksComponent},
   {path:"clothes/clothing-categories/:categoryId",component:ClothingComponent},
   {path:"clothing-categories",component:ClothingCategoryComponent},
-  {path:"product-add",component:ProductAddFormsComponent},
-  {path:"clothing-add",component:ClothingAddFormsComponent},
+  {path:"product-add",component:ProductAddFormsComponent,canActivate:[LoginGuard]},
+  {path:"clothing-add",component:ClothingAddFormsComponent,canActivate:[LoginGuard]},
   {path:"shoes-category",component:ShoesCategoryComponent},
   {path:"shoes/shoes-category/:categoryId",component:ShoesComponent},
-  {path:"shoe-add",component:ShoeAddFormsComponent}
+  {path:"shoe-add",component:ShoeAddFormsComponent,canActivate:[LoginGuard]},
+  {path:"login",component:LoginComponent}
 
 
 ];

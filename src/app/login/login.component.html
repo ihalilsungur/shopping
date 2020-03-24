@@ -1,0 +1,38 @@
+<div class="container form-container">
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-4 ">
+      <div class="card">
+        <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="form-label-group">
+            <input type="text" formControlName="username" id="username" name="username" class="form-control"
+              placeholder="Kullanıcı Adıd Giriniz" required autofocus>
+            <label for="inputEmail">Kullanıcı Adı</label>
+            <div class="alert alert-danger mt-2" style="font-weight: bold;"
+              *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').dirty">
+              Kullanıcı Adı Zorunludur!</div>
+          </div>
+
+          <div class="form-label-group">
+            <input type="password"  formControlName="password" id="password" name="password" class="form-control" placeholder="Şifre Giriniz" required>
+            <label for="inputPassword">Password</label>
+            <div class="alert alert-danger mt-2" style="font-weight: bold;"
+              *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').dirty">
+              Şifre Zorunludur!</div>
+          </div>
+
+
+          <div class="checkbox mb-3">
+            <div class="row" style="margin-left: 1px;">
+              <input type="checkbox" value="remember-me" style="width: 25px;">
+              <span style="font-weight: 500;margin-left: 0px;font-size: 13px;margin-top: -5px;">Beni Hatırla</span>
+            </div>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="loginForm.invalid">Giriş Yap</button>
+          <p class="mt-5 mb-3 text-muted text-center">&copy; 2020-2021</p>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

@@ -23,7 +23,7 @@
           Şu an <strong> {{ filterText }}</strong> aradınız </small>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4" *ngIf="accessControl()">
       <button type="button" class="btn btn-primary shoe-add" routerLink="/shoe-add">
         Ürün Ekle</button>
     </div>
