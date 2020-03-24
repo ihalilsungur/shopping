@@ -3,6 +3,7 @@ import { Shoes } from "./shoes";
 import { ShoesService } from "../services/shoes.service";
 import { AlertifyService } from "../services/alertify.service";
 import { ActivatedRoute } from "@angular/router";
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: "app-shoes",
@@ -14,7 +15,8 @@ export class ShoesComponent implements OnInit {
   constructor(
     private shoesService: ShoesService,
     private alertifyService: AlertifyService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private accountService:AccountService
   ) {}
   shoes: Shoes[];
   filterText = "";
@@ -30,4 +32,12 @@ export class ShoesComponent implements OnInit {
   addToCart(shoe) {
     this.alertifyService.success(shoe.name + " Ürünü Sepete Eklendi ");
   }
+
+  accessControl(){
+    let isLoggin = this.accountService.isLoggedIn();
+    if(isLoggin){
+      return true;
+    }
+    return false;
+   }
 }

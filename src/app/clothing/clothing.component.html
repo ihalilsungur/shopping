@@ -1,6 +1,6 @@
 <!-- <h3 class="" style="text-align: center;" *ngIf="clothes;else noProduct">{{title}}</h3>  -->
 <app-clothing-category></app-clothing-category>
-<ng-template #noProduct>
+<div class="container" *ngIf="!clothes">
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -10,19 +10,19 @@
     </div>
     <div class="col-md-3"></div>
   </div>
-</ng-template>
+</div>
 
 <div class="container-fluid mt-2 ">
   <div class="row">
     <div class="col-md-6">
-      <div class="form-group" *ngIf="clothes">
+      <div class="form-group" >
         <input class="form-control fas fa-search" class="callback-input" id="productName" [(ngModel)]="filterText"
           placeholder="Armamak istediğiniz ürünün ismini giriniz">
         <small id="" class="form-text text-muted" *ngIf="filterText">
           Şu an <strong> {{ filterText }}</strong> aradınız </small>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4" *ngIf="accessControl()">
       <button type="button" class="btn btn-primary product-add" routerLink="/clothing-add">
         Ürün Ekle</button>
     </div>

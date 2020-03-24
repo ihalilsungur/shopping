@@ -1,5 +1,6 @@
 <app-shoes-category></app-shoes-category>
-  <div class="container mt-3 noProduct" *ngIf="!shoes">
+
+  <div class="container  noProduct" *ngIf="!shoes">
   <div class="row" >
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -12,7 +13,7 @@
 </div>
 
 
-<div class="container-fluid mt-2 "*ngIf="shoes">
+<div class="container-fluid mt-2">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group" >
@@ -22,7 +23,7 @@
           Şu an <strong> {{ filterText }}</strong> aradınız </small>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4" *ngIf="accessControl()">
       <button type="button" class="btn btn-primary shoe-add" routerLink="/shoe-add">
         Ürün Ekle</button>
     </div>

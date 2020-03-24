@@ -21,6 +21,10 @@ import { ProductAddFormsComponent } from './product/product-add-forms/product-ad
 import { ClothingAddFormsComponent } from './clothing/clothing-add-forms/clothing-add-forms.component';
 import { ShoesCategoryComponent } from './shoes/shoes-category/shoes-category.component';
 import { ShoeAddFormsComponent } from './shoes/shoe-add-forms/shoe-add-forms.component';
+import { LoginComponent } from './login/login.component';
+import { AccountService } from './services/account.service';
+import { AlertifyService } from './services/alertify.service';
+import { LoginGuard } from './login/login.guard';
 
 
 
@@ -41,7 +45,8 @@ import { ShoeAddFormsComponent } from './shoes/shoe-add-forms/shoe-add-forms.com
     ProductAddFormsComponent,
     ClothingAddFormsComponent,
     ShoesCategoryComponent,
-    ShoeAddFormsComponent
+    ShoeAddFormsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,7 @@ import { ShoeAddFormsComponent } from './shoes/shoe-add-forms/shoe-add-forms.com
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AlertifyService,AccountService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
